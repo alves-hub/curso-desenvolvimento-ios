@@ -161,9 +161,55 @@ class Instrumento{
         print("acessou guitarra FENDER STRATO")
     }
     
+    // REVISAO CONDICIONAL
+    func trompete(qualidadeTromp: Int){
+        var trompe: Int = 2
+        
+        if qualidadeTromp <= trompe {
+            print("Trompete de qualidade duvidosa")
+        }else{
+            print("Trompete de boa qualidade")
+        }
+    }
+    
+    func violino(){
+        var index: Int = 0
+        
+        while index <= 10 {
+            print("O index é: \(index)")
+            index = index + 1
+            
+        }
+        print(" o index Final é: \(index)")
+    }
+    
+    func congas(){
+        var indexRepeat: Int = 1
+        repeat{
+            print("indexRepeat é:  \(indexRepeat)")
+            indexRepeat = indexRepeat + 1
+        }while indexRepeat <= 10
+                print("O indexRepeat final \(indexRepeat)")
+    }
+    
+    
+    // FUNCAO COM REPETICAO DOR REVISAO M1
+    func carrilhao(){
+        var indexFor: Int = 0
+        
+        for indexFor in 1...6{
+            print(indexFor)
+        }
+                
+    }
 }
 
+// Instancia objeto
+var meuInst: Instrumento = Instrumento()
 
-var meuIntrumento: Instrumento = Instrumento()
+meuInst.trompete(qualidadeTromp: 5)
+meuInst.violino()
+meuInst.congas()
+meuInst.carrilhao()
         
-print(meuIntrumento.bateria())
+print(meuInst.bateria())
