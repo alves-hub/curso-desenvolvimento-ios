@@ -172,6 +172,7 @@ class Instrumento{
         }
     }
     
+    // METODO DE REPETICAO WHILE
     func violino(){
         var index: Int = 0
         
@@ -183,6 +184,8 @@ class Instrumento{
         print(" o index Final é: \(index)")
     }
     
+    
+    // REVISAO METODOS DE REPETICAO  REPEAT
     func congas(){
         var indexRepeat: Int = 1
         repeat{
@@ -193,7 +196,7 @@ class Instrumento{
     }
     
     
-    // FUNCAO COM REPETICAO DOR REVISAO M1
+    // FUNCAO COM REPETICAO FOR REVISAO M1
     func carrilhao(){
         var indexFor: Int = 0
         
@@ -201,6 +204,21 @@ class Instrumento{
             print(indexFor)
         }
                 
+    }
+    
+    // REVISAO LISTA ARRAY COM FOR E IF (procurando um valor sem saber a posicao)
+    func listando(){
+        var diasSemana: [String] = ["Segunda-fera","Terca-fera","Quarta-fera","Quinta-fera","Sexta-fera"]
+        //var sexta: String = "Sexta-fera"
+        
+        for index in diasSemana {
+            if index != "Sexta-fera"{
+                print("Dia normal da semana!")
+            }else{
+                print("SEXTOUUU papai")
+            }
+
+        }
     }
 }
 
@@ -211,5 +229,7 @@ meuInst.trompete(qualidadeTromp: 5)
 meuInst.violino()
 meuInst.congas()
 meuInst.carrilhao()
+meuInst.listando()
         
 print(meuInst.bateria())
+
