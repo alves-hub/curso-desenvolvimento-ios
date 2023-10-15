@@ -211,17 +211,32 @@ class Instrumento{
         var diasSemana: [String] = ["Segunda-fera","Terca-fera","Quarta-fera","Quinta-fera","Sexta-fera"]
         //var sexta: String = "Sexta-fera"
         
-        for index in diasSemana {
-            if index != "Sexta-fera"{
+        // index busca a posicao e value pega o valor
+        for (index, value) in diasSemana.enumerated() {
+            if value != "Sexta-fera"{
                 print("Dia normal da semana!")
+                // conta a quantidade elemento que possui a lista
+                print(diasSemana.count)
             }else{
                 print("SEXTOUUU papai")
+                // algo boolean retornado se a lista esta fazia ou nao
+                print(diasSemana.isEmpty)
             }
 
         }
     }
-}
+    var marcasBateria: [String] = ["RMV","LUDWING","PREMIER","MAPEX","ODERY","PEARL","DW","YAMAHA"]
+       
+    
+    for (index, value) in marcaBatera.enumerated() {
+        if value != "LUDWING"{
+            print ("A Batera: \(value)")
+        }else{
+            print ("A Batera: \(value) é comum")
+        }
+    }
 
+    
 // Instancia objeto
 var meuInst: Instrumento = Instrumento()
 
@@ -232,4 +247,9 @@ meuInst.carrilhao()
 meuInst.listando()
         
 print(meuInst.bateria())
+
+
+
+
+
 
