@@ -235,18 +235,49 @@ class Instrumento{
             print ("A Batera: \(value) é comum")
         }
     }
+    
+    var pratosBaterias: [String] = ["Zildjian","Octagon","Sabian","Turquish","Stambul"]
+
+    for (index, value) in pratosBaterias.enumerated() {
+        if value != "Stambul"{
+            print("O prato \(value) é o melhor do mundo")
+        }else{
+            print("o pratos \(value) sao qualidade mediana")
+        }
+    }
 
     
 // Instancia objeto
 var meuInst: Instrumento = Instrumento()
 
-meuInst.trompete(qualidadeTromp: 5)
-meuInst.violino()
-meuInst.congas()
-meuInst.carrilhao()
-meuInst.listando()
+//meuInst.trompete(qualidadeTromp: 5)
+//meuInst.violino()
+//meuInst.congas()
+//meuInst.carrilhao()
+//meuInst.listando()
         
 print(meuInst.bateria())
+    
+    
+// revisao Dicionário principal diferenca entre o array é que os valores é por chave e valor
+    
+    
+var dicionario: [Int: String] = [1:"bateria", 2:"Violao", 3:"Baixo",4:"teclado"]
+
+ print(dicionario[1] ?? "SEM VALOR")
+
+dicionario.updateValue("bateriass", forKey:1)
+
+print(dicionario[1] ?? "SEM VALOR")
+
+// ao usar em um laco nao precisa de enumerated pois consegue pegar por key ou por value
+for valueDicionario in dicionario{
+    if valueDicionario.value == "teclado"{
+        print("Achei")
+    }else{
+        print("procurando")
+    }
+}
 
 
 
