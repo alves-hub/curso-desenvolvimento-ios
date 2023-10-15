@@ -72,21 +72,21 @@ var total: Double = minhaCarteira ?? 2.0
 
 // formando frases
 
-//Concatenacao: juntando as franses com as variaveis ou apenas com outra variavel
+//Concatenacao: juntando as franses com as variaveis ou apenas com outra variavel ================================================================================================
 var frases2: String = "Primeiro nome:" + " " + primeiroNome + "Sobrenome:" + (segundoNome ?? "Deu ruim")
 print(frases2)
 
-//Interpolação: inserindo uma variavel dentro de uma frase "String"
+//Interpolação: inserindo uma variavel dentro de uma frase "String" ================================================================================================
 var frases: String = "Primeiro nome: \(primeiroNome) Sobrenome: \(segundoNome ?? "nao tem") "
 print(frases)
 
 
-// inserindo valor Int em uma String
+// inserindo valor Int em uma String  ================================================================================================
 var fraseIdade: String = "minha idade é \(num1)"
 print(fraseIdade)
 
 
-// CONVERTENDO TIPO DE VARIAVEL PARA Int
+// CONVERTENDO TIPO DE VARIAVEL PARA Int  ================================================================================================
 var minhaIdade: Double = 35.6
 var minhaIdadeInt: Int = Int(minhaIdade)
 print(minhaIdadeInt)
@@ -104,10 +104,10 @@ print(teste1)
 
 //REVISÃO M1
 
-// DECLARANDO VARIAVEL E TIPAGEM
+// DECLARANDO VARIAVEL E TIPAGEM ================================================================================================
 var ajum: String = "teste"
 
-// sem especificar o tipo de variavel o mesmo é reconhecido pelo tipo de conteudo
+// sem especificar o tipo de variavel o mesmo é reconhecido pelo tipo de conteudo  ================================================================================================
 var interio = "teste"
 
 var inteiro: Int = 14
@@ -121,7 +121,7 @@ ajum = "jeff"
 
 print(ajum)
 
-// CONSTANT
+// CONSTANT  ================================================================================================
 
 let const: String = "jeff"
 
@@ -137,7 +137,7 @@ var frase10: String = "primeiro nome: " + primeiroNome + " " + "Segundo nome: " 
 print(frase10)
 
 
-//CRIANDO CLASS FUNCOES E INSTANCIA DE OBJETO REVISAO M1
+//CRIANDO CLASS FUNCOES E INSTANCIA DE OBJETO REVISAO M1 ================================================================================================
 class Instrumento{
     
     func violao(){
@@ -161,7 +161,7 @@ class Instrumento{
         print("acessou guitarra FENDER STRATO")
     }
     
-    // REVISAO CONDICIONAL
+    // REVISAO CONDICIONAL  ================================================================================================
     func trompete(qualidadeTromp: Int){
         var trompe: Int = 2
         
@@ -172,7 +172,7 @@ class Instrumento{
         }
     }
     
-    // METODO DE REPETICAO WHILE
+    // METODO DE REPETICAO WHILE ================================================================================================
     func violino(){
         var index: Int = 0
         
@@ -185,7 +185,7 @@ class Instrumento{
     }
     
     
-    // REVISAO METODOS DE REPETICAO  REPEAT
+    // REVISAO METODOS DE REPETICAO  REPEAT  ================================================================================================
     func congas(){
         var indexRepeat: Int = 1
         repeat{
@@ -196,7 +196,7 @@ class Instrumento{
     }
     
     
-    // FUNCAO COM REPETICAO FOR REVISAO M1
+    /// FUNCAO COM REPETICAO FOR REVISAO M1 ================================================================================================
     func carrilhao(){
         var indexFor: Int = 0
         
@@ -206,20 +206,20 @@ class Instrumento{
                 
     }
     
-    // REVISAO LISTA ARRAY COM FOR E IF (procurando um valor sem saber a posicao)
+    // REVISAO LISTA ARRAY COM FOR E IF (procurando um valor sem saber a posicao)  ================================================================================================
     func listando(){
         var diasSemana: [String] = ["Segunda-fera","Terca-fera","Quarta-fera","Quinta-fera","Sexta-fera"]
         //var sexta: String = "Sexta-fera"
         
-        // index busca a posicao e value pega o valor
+        // index busca a posicao e value pega o valor ================================================================================================
         for (index, value) in diasSemana.enumerated() {
             if value != "Sexta-fera"{
                 print("Dia normal da semana!")
-                // conta a quantidade elemento que possui a lista
+                // conta a quantidade elemento que possui a lista ================================================================================================
                 print(diasSemana.count)
             }else{
                 print("SEXTOUUU papai")
-                // algo boolean retornado se a lista esta fazia ou nao
+                // algo boolean retornado se a lista esta fazia ou nao ================================================================================================
                 print(diasSemana.isEmpty)
             }
 
@@ -259,7 +259,7 @@ var meuInst: Instrumento = Instrumento()
 print(meuInst.bateria())
     
     
-// revisao Dicionário principal diferenca entre o array é que os valores é por chave e valor
+// revisao Dicionário principal diferenca entre o array é que os valores é por chave e valor ====================================================================================
     
     
 var dicionario: [Int: String] = [1:"bateria", 2:"Violao", 3:"Baixo",4:"teclado"]
@@ -270,7 +270,7 @@ dicionario.updateValue("bateriass", forKey:1)
 
 print(dicionario[1] ?? "SEM VALOR")
 
-// ao usar em um laco nao precisa de enumerated pois consegue pegar por key ou por value
+// ao usar em um laço nao precisa de enumerated pois consegue pegar por key ou por value ====================================================================================
 for valueDicionario in dicionario{
     if valueDicionario.value == "teclado"{
         print("Achei")
