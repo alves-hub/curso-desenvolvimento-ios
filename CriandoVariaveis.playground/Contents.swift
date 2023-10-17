@@ -278,7 +278,41 @@ for valueDicionario in dicionario{
         print("procurando")
     }
 }
+    
+    
+    class refrigerante {
+        
+        var quantidadeLitro: String = "2L"
+        var possuiGas: Bool = true
+        
+        func fantaGuarana(){
+            print("Aqui vc acessou a Fanta guarana")
+        }
+        
+        var meuRefri: refrigerante = refrigerante()
+        meuRe
+    }
+    
+    var meuRefri: refrigerante = refrigerante()
+    
+    meuRefri.fantaGuarana()
+    
+    
+    // METODO CONSTRUTOR =============================================================
+    
+    class calcas {
+        
+        var jeans: String
+        var moleton: String
+        
+        init (jeans: String, moleton: String){
+            self.jeans = jeans
+            self.moleton = moleton
+        }
+            
+    }
 
+    var loja: calcas = calcas(jeans: "tecido aspero ", moleton: "tecido mole")
 
 
 
