@@ -315,6 +315,41 @@ for valueDicionario in dicionario{
     var loja: calcas = calcas(jeans: "tecido aspero ", moleton: "tecido mole")
 
 
+    //======================================== REVISAO HERANCA
+
+    class Instrumentos{
+        
+        func solo (){
+            print("Vai mlk brilha nesse solo")
+        }
+        
+        func rife (){
+            print("top esse rif  hein")
+        }
+        
+    }
+
+    class guitarra: Instrumentos {
+        
+        var base: Bool = true
+        var cordas: Int = 6
+        //override significa que estou sobrescrevendo a funcao que ja existe na herenca e
+        override func rife() {
+            print("Super top esse RIF cara!!")
+        }
+        
+       
+    }
+
+    class teclado: guitarra {
+        
+        var base: Bool = true
+        var teclas: Int = 6
+        
+    }
+
+    var meusInst: teclado = teclado()
+    meusInst.rife()
 
 
 
