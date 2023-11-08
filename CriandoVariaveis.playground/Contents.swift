@@ -192,7 +192,7 @@ class Instrumento{
             print("indexRepeat é:  \(indexRepeat)")
             indexRepeat = indexRepeat + 1
         }while indexRepeat <= 10
-                print("O indexRepeat final \(indexRepeat)")
+        print("O indexRepeat final \(indexRepeat)")
     }
     
     
@@ -203,7 +203,7 @@ class Instrumento{
         for indexFor in 1...6{
             print(indexFor)
         }
-                
+        
     }
     
     // REVISAO LISTA ARRAY COM FOR E IF (procurando um valor sem saber a posicao)  ================================================================================================
@@ -222,11 +222,11 @@ class Instrumento{
                 // algo boolean retornado se a lista esta fazia ou nao ================================================================================================
                 print(diasSemana.isEmpty)
             }
-
+            
         }
     }
     var marcasBateria: [String] = ["RMV","LUDWING","PREMIER","MAPEX","ODERY","PEARL","DW","YAMAHA"]
-       
+    
     
     for (index, value) in marcaBatera.enumerated() {
         if value != "LUDWING"{
@@ -237,7 +237,7 @@ class Instrumento{
     }
     
     var pratosBaterias: [String] = ["Zildjian","Octagon","Sabian","Turquish","Stambul"]
-
+    
     for (index, value) in pratosBaterias.enumerated() {
         if value != "Stambul"{
             print("O prato \(value) é o melhor do mundo")
@@ -245,39 +245,39 @@ class Instrumento{
             print("o pratos \(value) sao qualidade mediana")
         }
     }
-
-    
-// Instancia objeto
-var meuInst: Instrumento = Instrumento()
-
-//meuInst.trompete(qualidadeTromp: 5)
-//meuInst.violino()
-//meuInst.congas()
-//meuInst.carrilhao()
-//meuInst.listando()
-        
-print(meuInst.bateria())
     
     
-// revisao Dicionário principal diferenca entre o array é que os valores é por chave e valor ====================================================================================
+    // Instancia objeto
+    var meuInst: Instrumento = Instrumento()
+    
+    //meuInst.trompete(qualidadeTromp: 5)
+    //meuInst.violino()
+    //meuInst.congas()
+    //meuInst.carrilhao()
+    //meuInst.listando()
+    
+    print(meuInst.bateria())
     
     
-var dicionario: [Int: String] = [1:"bateria", 2:"Violao", 3:"Baixo",4:"teclado"]
-
- print(dicionario[1] ?? "SEM VALOR")
-
-dicionario.updateValue("bateriass", forKey:1)
-
-print(dicionario[1] ?? "SEM VALOR")
-
-// ao usar em um laço nao precisa de enumerated pois consegue pegar por key ou por value ====================================================================================
-for valueDicionario in dicionario{
-    if valueDicionario.value == "teclado"{
-        print("Achei")
-    }else{
-        print("procurando")
+    // revisao Dicionário principal diferenca entre o array é que os valores é por chave e valor ====================================================================================
+    
+    
+    var dicionario: [Int: String] = [1:"bateria", 2:"Violao", 3:"Baixo",4:"teclado"]
+    
+    print(dicionario[1] ?? "SEM VALOR")
+    
+    dicionario.updateValue("bateriass", forKey:1)
+    
+    print(dicionario[1] ?? "SEM VALOR")
+    
+    // ao usar em um laço nao precisa de enumerated pois consegue pegar por key ou por value ====================================================================================
+    for valueDicionario in dicionario{
+        if valueDicionario.value == "teclado"{
+            print("Achei")
+        }else{
+            print("procurando")
+        }
     }
-}
     
     
     class refrigerante {
@@ -309,14 +309,14 @@ for valueDicionario in dicionario{
             self.jeans = jeans
             self.moleton = moleton
         }
-            
+        
     }
-
+    
     var loja: calcas = calcas(jeans: "tecido aspero ", moleton: "tecido mole")
-
-
+    
+    
     //======================================== REVISAO HERANCA
-
+    
     class Instrumentos{
         
         func solo (){
@@ -328,7 +328,7 @@ for valueDicionario in dicionario{
         }
         
     }
-
+    
     class guitarra: Instrumentos {
         
         var base: Bool = true
@@ -338,18 +338,40 @@ for valueDicionario in dicionario{
             print("Super top esse RIF cara!!")
         }
         
-       
+        
     }
-
+    
     class teclado: guitarra {
         
         var base: Bool = true
         var teclas: Int = 6
         
     }
-
+    
     var meusInst: teclado = teclado()
     meusInst.rife()
-
-
-
+    
+    //===========================================REVISAO STRUCT
+    //    -> Muito parecido com uma classe porem a diferenca é que struct trabalhar com valor e class com referencia.
+    //    -> struct nao tem necessidade de criar metodo construtor pois a mesma ja cria automaticamente
+    //    -> Struct nao trabalha com heranca
+    
+    struct sobrado {
+        var qtoPortas: Int
+        var qtoBanheiro: Int
+        var emConstrucao: Bool
+    }
+    
+    var casaDavi: sobrado = sobrado(qtoPortas: 13, qtoBanheiro: 6, emConstrucao: true)
+    var casaAtum: sobrado = sobrado(qtoPortas: 10, qtoBanheiro: 2, emConstrucao: false)
+    
+    print(casaDavi.qtoPortas)
+    print(casaAtum.qtoPortas)
+    
+    casaDavi = casaAtum
+    
+    // Apenas o valor da porta de Davi será alterado pois struct nao traballha com referencia 
+    casaDavi.qtoPortas = 90
+    
+    print(casaDavi.qtoPortas)
+    print(casaAtum.qtoPortas)
